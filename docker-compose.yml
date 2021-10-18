@@ -1,0 +1,12 @@
+version: "2.4"
+
+services:
+  cornelsen:
+    build: .
+    environment:
+      - temp=temp
+    runtime: nvidia
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
